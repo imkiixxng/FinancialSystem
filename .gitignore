@@ -1,0 +1,15 @@
+# Java backend
+/target/
+/*.iml
+*.class
+.mvn/
+.settings/
+.idea/
+
+# Vue frontend
+/node_modules/
+/dist/
+
+# System files
+.DS_Store
+.env
