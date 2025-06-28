@@ -1,0 +1,25 @@
+CREATE TABLE User (
+    UserID VARCHAR(20) PRIMARY KEY,
+    UserName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Account VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Product (
+    No INT PRIMARY KEY AUTO_INCREMENT,
+    ProductName VARCHAR(100) NOT NULL UNIQUE, -- 加上唯一鍵限制
+    Price DECIMAL(10, 2) NOT NULL,
+    FeeRate DECIMAL(5, 4) NOT NULL
+);
+
+CREATE TABLE LikeList (
+    SN INT PRIMARY KEY AUTO_INCREMENT,
+    UserID VARCHAR(20),
+    ProductNo INT,
+    OrderAmount INT NOT NULL,
+    Account VARCHAR(20) NOT NULL,
+    TotalAmount DECIMAL(12, 2) NOT NULL,
+    TotalFee DECIMAL(12, 2) NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES User(UserID),
+    FOREIGN KEY (ProductNo) REFERENCES Product(No)
+);

@@ -1,15 +1,22 @@
-# Java backend
-/target/
-/*.iml
-*.class
-.mvn/
-.settings/
-.idea/
-
-# Vue frontend
-/node_modules/
-/dist/
-
-# System files
-.DS_Store
+# Node.js
+node_modules/
+dist/
 .env
+*.log
+
+# Java
+target/
+*.class
+*.jar
+*.war
+
+# VSCode / Eclipse / IntelliJ
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# 作業系統
+.DS_Store
+Thumbs.db
